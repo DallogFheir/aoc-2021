@@ -66,7 +66,7 @@ end
 ###
 
 file = File.open(File.dirname(__FILE__) + "/input.txt")
-manual = file.read.split("\n\n")
+manual = file.read.split("\r\n\r\n")
 dots = manual[0].split.collect{|x| x.split(",").collect(&:to_i)}
 folds = manual[1].split("\n").collect{|x| x.delete_prefix("fold along ").split("=")}.collect{|x| [x[0], x[1].to_i]}
 file.close
